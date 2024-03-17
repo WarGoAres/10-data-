@@ -44,16 +44,23 @@ int main(void ) {
       
   
 	int len = sizeof(data) / sizeof(data[0]);
-    
+    srand(time(NULL)); 
+    for (int i = 0; i < number; ++i) {
+        data[i] = rand() % 101; //產生10萬個0到100的數字
+    }
+	
     insertionsort(data,len); 
     
-    for(int i = 0; i < len; ++i) {
+    for(int i = 0; i <number; ++i) {
      
 	 	
      printf("%d\n",data[i] )	;
     	
 	}
 	
+
+
+ 
    
   
     
